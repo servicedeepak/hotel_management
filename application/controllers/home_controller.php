@@ -18,4 +18,14 @@ class home_controller extends CI_Controller
 	{
 		$this->load->view('index');
 	}
+
+	public function user_profile()
+	{
+		$this->load->view('profile');
+	}
+
+	public function user_details(){
+
+		$this->load->view('');
+	}
 }

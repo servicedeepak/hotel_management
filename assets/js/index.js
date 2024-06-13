@@ -14,7 +14,7 @@ let loginBtn = loginForm.querySelector("button");
 if (localStorage.getItem("alluserinfo") != null) {
   alluserinfo = JSON.parse(localStorage.getItem("alluserinfo"));
 }
-console.log(alluserinfo);
+// console.log(alluserinfo);
 
 
 // Registration coding
@@ -37,7 +37,7 @@ regForm.onsubmit = (e) => {
       alluserinfo.push(data);
       localStorage.setItem("alluserinfo", JSON.stringify(alluserinfo));
       swal("Good Job !", "Registration Success !", "success");
-    }, 1000);
+    }, 1500);
 
 
   } else {
@@ -47,7 +47,6 @@ regForm.onsubmit = (e) => {
 
 
 // Login coding
-
 loginForm.onsubmit = (e) => {
   e.preventDefault();
   if (allLoginInoput[0].value != "") {
@@ -59,15 +58,22 @@ loginForm.onsubmit = (e) => {
         if (checkEmail.password == allLoginInoput[1].value) {
           loginBtn.innerText = "Please wait...";
           setTimeout(() => {
-            loginBtn.innerText = "Login";
-          }, 2000);
+            var url = window.location.href + "/user_profile";;
+            window.location = url;
+            checkEmail.password = null;
+            sessionStorage.setItem("__au__", JSON.stringify(checkEmail));
+          },1500);
+            Swal.fire({
+              position: "top-end",
+              icon: "success",
+              title: "Login Successfully....",
+              showConfirmButton: false,
+              timer: 1000
+            });
+          
         } else {
           swal("Warning", "Worng Password is  empty.!", "warning");
-
         }
-      }
-      else {
-        swal("success", "Login Successfully..!", "success");
       }
     }
     else {

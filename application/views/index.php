@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,13 +12,11 @@
 	<!-- js linkd-->
 	<script src="assets/js/sweetalert.min.js"></script>
 	<script src="assets/js/bootstrap.bundle.min.js"></script>
-	<!-- <script src="assets/js/sweetalert2@11.js"></script> -->
+	<script src="assets/js/sweetalert2@11.js"></script>
 	<!-- js linkd-->
 	<title>Home Page..</title>
 </head>
-
 <body>
-
 	<nav class="navbar navbar-expand-md fixed-top navbar-light">
 		<div class="container-fluid">
 			<img src="assets/css/pngwing.com (1).png" width="40px" alt="" class="rounded-circle">
@@ -49,10 +46,10 @@
 				<!--navtab-->
 				<ul class="nav nav-tabs">
 					<li class="nav-item">
-						<a href="#Singup" class="nav-link" data-bs-toggle="tab">Singup</a>
+						<a href="#Singup" class="nav-link fw-bold" data-bs-toggle="tab">Singup</a>
 					</li>
 					<li class="nav-item">
-						<a href="#login" class="nav-link active" data-bs-toggle="tab">Login</a>
+						<a href="#login" class="nav-link active fw-bold" data-bs-toggle="tab">Login</a>
 					</li>
 				</ul>
 				<br>
@@ -73,8 +70,8 @@
 					<div class="tab-pane active container mt-3" id="login">
 						<p class="h2">Login</p>
 						<form class="login-form">
-							<input type="email" placeholder="Email" class="mb-3 form-control">
-							<input type="password" placeholder="Password" class="mb-3 form-control">
+							<input type="email" name="email" placeholder="Email" class="mb-3 form-control">
+							<input type="password" name="password" placeholder="Password" class="mb-3 form-control">
 							<button type="submit" class="btn btn-primary w-100">Login</button>
 						</form>
 					</div>
